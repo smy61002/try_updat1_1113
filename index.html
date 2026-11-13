@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#11120f">
+  <title>團員介紹｜F4</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f4f0e8;
+      --muted: #a7a69d;
+      --accent: #d3f36b;
+      --paper: #11120f;
+      --line: rgba(244, 240, 232, .18);
+      --serif: Georgia, "Noto Serif TC", serif;
+      --sans: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .wrap {
+      width: min(1180px, calc(100% - 64px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      width: 25px;
+      height: 25px;
+      display: grid;
+      place-items: center;
+      background: var(--accent);
+      color: var(--paper);
+      font-size: 13px;
+      transform: rotate(-8deg);
+    }
+
+    .nav {
+      display: flex;
+      gap: 34px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .08em;
+    }
+
+    .nav a { transition: color .2s ease; }
+    .nav a:hover, .nav a:focus-visible { color: var(--accent); }
+
+    .nav .show-link { color: var(--accent); }
+
+    .hero {
+      min-height: 390px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 72px 0 66px;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "F4";
+      position: absolute;
+      z-index: -1;
+      right: 3%;
+      top: -105px;
+      color: rgba(211, 243, 107, .055);
+      font-family: var(--serif);
+      font-size: clamp(350px, 52vw, 650px);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 20px;
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .2em;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 27px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    h1 {
+      max-width: 800px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(52px, 8vw, 104px);
+      font-weight: 400;
+      letter-spacing: -.055em;
+      line-height: .98;
+    }
+
+    h1 em {
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    .hero-bottom {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-top: 28px;
+    }
+
+    .hero-copy {
+      max-width: 410px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .side-note {
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .13em;
+      text-align: right;
+      text-transform: uppercase;
+    }
+
+    .members-section { padding: 28px 0 92px; }
+
+    .performance-section { padding: 10px 0 76px; }
+
+    .performance-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 170px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 30px;
+      padding: 28px 32px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(ellipse at 100% 0%, rgba(211, 243, 107, .1), transparent 42%),
+        #191a16;
+      overflow: hidden;
+    }
+
+    .show-date {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 130px;
+      border-right: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .show-date .month {
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .18em;
+    }
+
+    .show-date .day {
+      font-family: var(--serif);
+      font-size: 68px;
+      letter-spacing: -.08em;
+      line-height: 1.05;
+    }
+
+    .show-date .weekday {
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .16em;
+    }
+
+    .show-details .eyebrow { margin-bottom: 10px; }
+
+    .show-details h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 400;
+      letter-spacing: -.03em;
+    }
+
+    .show-details p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .countdown {
+      min-width: 154px;
+      text-align: center;
+    }
+
+    .countdown-label {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .12em;
+    }
+
+    .countdown-value {
+      color: var(--accent);
+      font-family: var(--serif);
+      font-size: 54px;
+      line-height: 1;
+    }
+
+    .countdown-unit {
+      margin-left: 7px;
+      color: var(--ink);
+      font-size: 12px;
+    }
+
+    .countdown.is-today .countdown-value,
+    .countdown.is-past .countdown-value {
+      font-family: var(--sans);
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(29px, 4vw, 42px);
+      font-weight: 400;
+      letter-spacing: -.035em;
+    }
+
+    .section-heading p {
+      margin: 0 0 5px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .1em;
+    }
+
+    .member-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .member-card { min-width: 0; }
+    .member-card { position: relative; }
+
+    .member-trigger {
+      position: absolute;
+      z-index: 2;
+      inset: 0;
+      width: 100%;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .member-trigger:focus-visible {
+      z-index: 3;
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .portrait {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: #30332a;
+    }
+
+    .member-art {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      object-fit: cover;
+      transition: transform .6s cubic-bezier(.2, .7, .2, 1);
+    }
+
+    .member-card:hover .member-art,
+    .member-card:focus-within .member-art {
+      transform: scale(1.045);
+    }
+
+    .member-number {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border: 1px solid rgba(255,255,255,.55);
+      border-radius: 50%;
+      color: white;
+      font-size: 10px;
+      backdrop-filter: blur(6px);
+      z-index: 1;
+    }
+
+    .member-info {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 15px 0 0;
+      border-top: 1px solid var(--line);
+      margin-top: 12px;
+    }
+
+    .member-info h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 23px;
+      font-weight: 400;
+      letter-spacing: -.02em;
+    }
+
+    .member-role {
+      margin: 5px 0 0;
+      color: var(--accent);
+      font-size: 10px;
+      letter-spacing: .12em;
+    }
+
+    .member-bio {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .arrow {
+      color: var(--muted);
+      font-size: 17px;
+      transition: color .2s, transform .2s;
+    }
+
+    .member-card:hover .arrow { color: var(--accent); transform: translate(2px, -2px); }
+
+    .member-dialog {
+      width: min(860px, calc(100vw - 40px));
+      max-width: none;
+      max-height: min(760px, calc(100dvh - 40px));
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #191a16;
+      color: var(--ink);
+    }
+
+    .member-dialog::backdrop {
+      background: rgba(0, 0, 0, .78);
+      backdrop-filter: blur(5px);
+      animation: backdrop-enter .22s ease-out both;
+    }
+
+    .dialog-panel {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 440px;
+    }
+
+    .dialog-art {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 440px;
+      object-fit: cover;
+      background: #20231c;
+    }
+
+    .dialog-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px;
+    }
+
+    .dialog-copy .eyebrow { margin-bottom: 18px; }
+
+    .dialog-copy h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(36px, 5vw, 58px);
+      font-weight: 400;
+      letter-spacing: -.04em;
+    }
+
+    .dialog-role {
+      margin: 12px 0 0;
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: .12em;
+    }
+
+    .dialog-bio {
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .dialog-signature {
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .18em;
+    }
+
+    .dialog-close {
+      position: absolute;
+      z-index: 1;
+      top: 14px;
+      right: 14px;
+      display: grid;
+      width: 40px;
+      height: 40px;
+      place-items: center;
+      border: 1px solid rgba(244, 240, 232, .35);
+      border-radius: 50%;
+      background: rgba(17, 18, 15, .78);
+      color: var(--ink);
+      font: inherit;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .member-dialog[open] .dialog-panel {
+      animation: dialog-enter .3s cubic-bezier(.2, .7, .2, 1) both;
+    }
+
+    @keyframes dialog-enter {
+      from { opacity: 0; transform: translateY(18px) scale(.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes backdrop-enter {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .member-dialog[open] .dialog-panel,
+      .member-dialog::backdrop { animation: none; }
+    }
+
+    .band-note {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+      padding: 29px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .band-note h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 400;
+      line-height: 1.25;
+    }
+
+    .band-note h2 span { color: var(--accent); }
+
+    .band-note p {
+      max-width: 440px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 25px 0 32px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .1em;
+    }
+
+    footer strong { color: var(--ink); }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 40px, 560px); }
+      .topbar { min-height: 65px; }
+      .nav { gap: 18px; font-size: 10px; }
+      .hero { min-height: 350px; padding: 62px 0 48px; }
+      .hero-bottom { align-items: flex-start; }
+      .side-note { display: none; }
+      .member-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 14px; }
+      .member-info h3 { font-size: 21px; }
+      .band-note { grid-template-columns: 1fr; gap: 16px; }
+      .performance-card { grid-template-columns: 105px minmax(0, 1fr); gap: 18px; padding: 22px 18px; }
+      .show-date { min-height: 112px; }
+      .show-date .day { font-size: 54px; }
+      .countdown { grid-column: 1 / -1; display: flex; align-items: baseline; justify-content: center; gap: 8px; padding-top: 16px; border-top: 1px solid var(--line); }
+      .countdown-label { margin: 0; }
+      .countdown-value { font-size: 38px; }
+      .countdown-unit { margin-left: -5px; }
+      .dialog-copy { padding: 32px 24px; }
+    }
+
+    @media (max-width: 420px) {
+      .wrap { width: calc(100% - 32px); }
+      .brand { font-size: 11px; }
+      .nav { gap: 13px; font-size: 9px; }
+      .hero { min-height: 320px; }
+      .hero-copy { font-size: 13px; }
+      .section-heading { align-items: flex-start; flex-direction: column; gap: 7px; }
+      .member-info h3 { font-size: 19px; }
+      .member-bio { font-size: 11px; }
+      .performance-card { grid-template-columns: 82px minmax(0, 1fr); gap: 14px; padding: 18px 13px; }
+      .show-date { min-height: 104px; }
+      .show-date .day { font-size: 48px; }
+      .show-details h2 { font-size: 22px; }
+      .show-details p { font-size: 11px; }
+      .countdown-label { font-size: 9px; }
+      .member-dialog { width: calc(100vw - 24px); max-height: calc(100dvh - 24px); overflow-y: auto; }
+      .dialog-panel { grid-template-columns: 1fr; }
+      .dialog-art { height: min(42svh, 330px); min-height: 200px; }
+      .dialog-copy { padding: 22px 22px 26px; }
+      .dialog-copy .eyebrow { margin-bottom: 10px; }
+      .dialog-copy h2 { font-size: 36px; }
+      .dialog-bio { margin-top: 14px; font-size: 13px; }
+      .dialog-signature { margin-top: 22px; }
+      footer { flex-direction: column; gap: 8px; }
+    }
+
+    @media (max-width: 420px) {
+      .dialog-panel { min-height: 0; }
+      .dialog-art { height: min(36svh, 270px); object-fit: contain; background: #11120f; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap topbar">
+    <a class="brand" href="#" aria-label="F4 首頁">
+      <span class="brand-mark" aria-hidden="true">✳</span>
+      <span>F4</span>
+    </a>
+    <nav class="nav" aria-label="主要導覽">
+      <a class="show-link" href="#performance">演出日期</a>
+      <a href="#members">團員介紹</a>
+      <a href="#story">關於我們</a>
+      <a href="#contact">聯絡我們</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap hero" aria-labelledby="page-title">
+      <p class="eyebrow">MEET THE BAND · 2026</p>
+      <h1 id="page-title">四個靈魂，<br><em>同一種</em>頻率。</h1>
+      <div class="hero-bottom">
+        <p class="hero-copy">我們是 F4。四個人、四種個性，歡迎來認識我們，看看誰最對你的頻率。</p>
+        <span class="side-note">FOUR MEMBERS<br>ONE BAND</span>
+      </div>
+    </section>
+
+    <section class="wrap performance-section" id="performance" aria-labelledby="performance-title">
+      <div
+        class="performance-card"
+        data-show-date="2026-12-12"
+        data-show-time="19:30"
+        aria-label="F4 下一場演出"
+      >
+        <div class="show-date" aria-label="演出日期">
+          <span class="month" data-date-month></span>
+          <time class="day" data-date-day></time>
+          <span class="weekday" data-date-weekday></span>
+        </div>
+        <div class="show-details">
+          <p class="eyebrow">NEXT LIVE · TAIPEI</p>
+          <h2 id="performance-title">F4 夜色現場</h2>
+          <p><time data-date-full></time>・<span data-show-time></span><br>台北 The Wall Live House</p>
+        </div>
+        <div class="countdown" data-countdown aria-live="polite">
+          <span class="countdown-label">距離演出還有</span>
+          <strong class="countdown-value" data-countdown-value></strong>
+          <span class="countdown-unit" data-countdown-unit>天</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap members-section" id="members" aria-labelledby="members-title">
+      <div class="section-heading">
+        <h2 id="members-title">認識團員 <span aria-hidden="true">↘</span></h2>
+        <p>點擊團員卡片・看更多介紹</p>
+      </div>
+
+      <div class="member-grid">
+        <article class="member-card">
+          <div class="portrait">
+            <img class="member-art" src="sonic.svg" alt="卡通 Sonic：壯碩平頭男，穿著藍色比基尼">
+            <span class="member-number">01</span>
+          </div>
+          <div class="member-info">
+            <div>
+              <h3>Sonic</h3>
+              <p class="member-role">藍色比基尼・平頭</p>
+            </div>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="member-bio">壯碩平頭男，最愛穿上招牌藍色比基尼，帶著自信登場。</p>
+          <button class="member-trigger" type="button" aria-label="查看 Sonic 的介紹"></button>
+        </article>
+
+        <article class="member-card">
+          <div class="portrait">
+            <img class="member-art" src="ed.svg" alt="卡通 ED：戴著耳機站在 DJ 混音台後">
+            <span class="member-number">02</span>
+          </div>
+          <div class="member-info">
+            <div>
+              <h3>ED</h3>
+              <p class="member-role">DJ</p>
+            </div>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="member-bio">站上 DJ 台，用節拍和混音把現場氣氛帶到最高點。</p>
+          <button class="member-trigger" type="button" aria-label="查看 ED 的介紹"></button>
+        </article>
+
+        <article class="member-card">
+          <div class="portrait">
+            <img class="member-art" src="yo.svg" alt="卡通 YO：皮膚黝黑、造型狂野的舞台人物">
+            <span class="member-number">03</span>
+          </div>
+          <div class="member-info">
+            <div>
+              <h3>YO</h3>
+              <p class="member-role">黝黑・狂野系</p>
+            </div>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="member-bio">皮膚黝黑、風格狂野，總是用滿滿能量點燃舞台。</p>
+          <button class="member-trigger" type="button" aria-label="查看 YO 的介紹"></button>
+        </article>
+
+        <article class="member-card">
+          <div class="portrait">
+            <img class="member-art" src="halu.svg" alt="卡通 Halu：在小鋼珠台前玩得起勁">
+            <span class="member-number">04</span>
+          </div>
+          <div class="member-info">
+            <div>
+              <h3>Halu</h3>
+              <p class="member-role">小鋼珠玩家</p>
+            </div>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </div>
+          <p class="member-bio">最喜歡玩小鋼珠，享受彈珠穿梭彈台的每一刻。</p>
+          <button class="member-trigger" type="button" aria-label="查看 Halu 的介紹"></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap band-note" id="story">
+      <h2>「音樂不是答案，<br><span>是陪你走一段路。</span>」</h2>
+      <p>四個人、四種個性，因為喜歡音樂聚在一起。從 Sonic 的招牌藍色比基尼、ED 的 DJ 節拍，到 YO 的狂野舞台能量與 Halu 的彈珠時光，這就是 F4 的日常風景。</p>
+    </section>
+  </main>
+
+  <dialog class="member-dialog" id="member-dialog" aria-labelledby="dialog-name">
+    <div class="dialog-panel">
+      <button class="dialog-close" type="button" aria-label="關閉團員介紹">×</button>
+      <img class="dialog-art" data-dialog-image alt="">
+      <div class="dialog-copy">
+        <p class="eyebrow">MEET THE MEMBER</p>
+        <h2 id="dialog-name"></h2>
+        <p class="dialog-role" data-dialog-role></p>
+        <p class="dialog-bio" data-dialog-bio></p>
+        <span class="dialog-signature">F4 · MEMBER PROFILE</span>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="wrap" id="contact">
+    <span><strong>F4</strong>　獨立樂團</span>
+    <span>合作邀約・聯絡方式待更新</span>
+    <span>© 2026 F4</span>
+  </footer>
+  <script src="performance.js"></script>
+  <script src="members.js"></script>
+</body>
+</html>

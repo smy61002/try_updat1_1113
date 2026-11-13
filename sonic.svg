@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <title>Sonic，穿藍色比基尼的壯碩平頭男</title>
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1">
+      <stop stop-color="#285b89"/>
+      <stop offset="1" stop-color="#101c2c"/>
+    </linearGradient>
+    <linearGradient id="skin" x2=".8" y2="1">
+      <stop stop-color="#f2c8a4"/>
+      <stop offset="1" stop-color="#c8845e"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#bg)"/>
+  <circle cx="312" cy="82" r="118" fill="#67b6ff" opacity=".14"/>
+  <path d="M25 350 115 256m168-120 94-94M18 127 77 68m258 367 54-54" stroke="#fff" stroke-opacity=".12" stroke-width="3"/>
+  <path d="M68 493c4-80 32-132 88-151h88c57 20 85 71 89 151" fill="#223244" stroke="#101c2c" stroke-width="10"/>
+  <path d="M146 327c-4 55-2 111 9 166m90-166c4 55 2 111-9 166" fill="url(#skin)" stroke="#754c3a" stroke-width="5"/>
+  <path d="M136 203c-32 7-53 29-62 68l-20 99c-5 24 8 40 27 38 14-1 22-12 26-31l18-67 13 40h124l13-40 18 67c4 19 12 30 26 31 19 2 32-14 27-38l-20-99c-9-39-30-61-62-68z" fill="url(#skin)" stroke="#754c3a" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M163 139v-20c0-32 17-54 37-54s37 22 37 54v20" fill="#24232a" stroke="#15151a" stroke-width="7"/>
+  <ellipse cx="153" cy="148" rx="14" ry="20" fill="#d99d78"/>
+  <ellipse cx="247" cy="148" rx="14" ry="20" fill="#d99d78"/>
+  <path d="M151 109c2-42 21-62 49-62s47 20 49 62c-13-8-28-12-49-12s-36 4-49 12" fill="#202027"/>
+  <path d="M151 121c0-27 20-47 49-47s49 20 49 47v47c0 34-21 56-49 56s-49-22-49-56z" fill="url(#skin)" stroke="#754c3a" stroke-width="6"/>
+  <path d="M164 143h22m28 0h22" stroke="#30231e" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="177" cy="156" rx="5" ry="7" fill="#202027"/>
+  <ellipse cx="223" cy="156" rx="5" ry="7" fill="#202027"/>
+  <path d="m200 158-7 21 9 3m-17 13c9 8 23 8 32 0" fill="none" stroke="#754c3a" stroke-width="4" stroke-linecap="round"/>
+  <path d="m151 235 49 28 49-28-11 60h-76z" fill="#1685ef" stroke="#0c4e9c" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M166 233v-15m68 15v-15" stroke="#1685ef" stroke-width="8" stroke-linecap="round"/>
+  <path d="m147 311 53 15 53-15 17 42-70 22-70-22z" fill="#1685ef" stroke="#0c4e9c" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M54 437c51-21 94-24 146-17m148 17c-51-21-94-24-146-17" fill="none" stroke="#8acbff" stroke-opacity=".4" stroke-width="4"/>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <title>YO，黝黑狂野的舞台人物</title>
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1">
+      <stop stop-color="#9d582d"/>
+      <stop offset="1" stop-color="#21130f"/>
+    </linearGradient>
+    <linearGradient id="skin" x2=".8" y2="1">
+      <stop stop-color="#9a5d3c"/>
+      <stop offset="1" stop-color="#61351f"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#bg)"/>
+  <path d="m70 0 95 120-72-10 87 114L47 126l60 4zM330 0 235 120l72-10-87 114 133-98-60 4z" fill="#ffb356" opacity=".2"/>
+  <path d="M68 493c6-81 34-133 91-152h82c57 19 85 71 91 152" fill="#29211d" stroke="#17110e" stroke-width="10"/>
+  <path d="m150 349 50 42 50-42 37 144H113z" fill="#37302a"/>
+  <path d="M150 177c-8-53 13-84 51-84s59 31 51 84l-8 64c-6 34-21 55-43 55s-37-21-43-55z" fill="url(#skin)" stroke="#3b241b" stroke-width="6"/>
+  <path d="m148 153-18-32 29 8-8-44 34 31 6-57 22 47 28-36-3 54 31-20-20 53-25-12-9-8c-21 13-44 17-67 16z" fill="#171514" stroke="#171514" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M160 177h24m32 0h24" stroke="#251915" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="174" cy="190" rx="5" ry="8" fill="#110e0d"/>
+  <ellipse cx="226" cy="190" rx="5" ry="8" fill="#110e0d"/>
+  <path d="m198 193-9 27 11 3m-19 14c10 9 26 9 36 0" fill="none" stroke="#40251a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M131 321 91 340l-33 83c-8 20 5 35 21 30 9-2 14-10 20-22l35-62m135-48 40 19 33 83c8 20-5 35-21 30-9-2-14-10-20-22l-35-62" fill="url(#skin)" stroke="#3b241b" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M182 299v-25m36 25v-25" stroke="url(#skin)" stroke-width="20"/>
+  <path d="m166 325 34 24 34-24m-66 37 32 23 32-23" fill="none" stroke="#d58b45" stroke-width="7" stroke-linecap="round"/>
+  <path d="M22 265h50m256 0h50M42 298h24m268 0h24" stroke="#ffcc72" stroke-opacity=".7" stroke-width="5" stroke-linecap="round"/>
+  <path d="M200 25v55M176 52l24 28 24-28" fill="none" stroke="#ffcc72" stroke-width="4" opacity=".75"/>
+</svg>

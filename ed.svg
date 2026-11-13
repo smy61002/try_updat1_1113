@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <title>ED，戴耳機的 DJ</title>
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1">
+      <stop stop-color="#653d76"/>
+      <stop offset="1" stop-color="#171426"/>
+    </linearGradient>
+    <linearGradient id="skin" x2=".8" y2="1">
+      <stop stop-color="#f1c39f"/>
+      <stop offset="1" stop-color="#bd805f"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#bg)"/>
+  <circle cx="204" cy="206" r="148" fill="none" stroke="#ff9ee9" stroke-opacity=".16" stroke-width="2"/>
+  <circle cx="204" cy="206" r="116" fill="none" stroke="#ff9ee9" stroke-opacity=".12" stroke-width="2"/>
+  <path d="M44 120h5m18 0h5m18 0h5m18 0h5m18 0h5m18 0h5" stroke="#d7a2eb" stroke-width="5" stroke-linecap="round"/>
+  <path d="M63 456c7-79 32-129 87-147h100c55 18 80 68 87 147" fill="#202138" stroke="#10111d" stroke-width="9"/>
+  <path d="M180 268v48m40-48v48" stroke="url(#skin)" stroke-width="24"/>
+  <path d="M148 195c0-52 20-78 56-78s56 26 56 78v62c-8 39-27 58-56 58s-48-19-56-58z" fill="url(#skin)" stroke="#704a3a" stroke-width="6"/>
+  <path d="M144 195c-8-51 9-91 60-91s68 40 60 91l-17-26-16-26c-16 15-41 24-77 25z" fill="#17151e"/>
+  <path d="M144 180c-28 1-30 20-27 44 2 17 12 27 27 24m112-68c28 1 30 20 27 44-2 17-12 27-27 24" fill="none" stroke="#282637" stroke-width="13"/>
+  <rect x="123" y="188" width="25" height="47" rx="10" fill="#e052d4" stroke="#242132" stroke-width="6"/>
+  <rect x="252" y="188" width="25" height="47" rx="10" fill="#e052d4" stroke="#242132" stroke-width="6"/>
+  <path d="M165 207h22m31 0h22" stroke="#38251f" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="176" cy="218" rx="5" ry="7" fill="#211b1b"/>
+  <ellipse cx="224" cy="218" rx="5" ry="7" fill="#211b1b"/>
+  <path d="M191 225v18l9 3m-17 11c10 9 21 9 31 0" fill="none" stroke="#84543e" stroke-width="4" stroke-linecap="round"/>
+  <path d="M95 361h210l32 41v84H63v-84z" fill="#11131f" stroke="#393950" stroke-width="7" stroke-linejoin="round"/>
+  <circle cx="135" cy="421" r="39" fill="#292a3c" stroke="#df8ee4" stroke-width="5"/>
+  <circle cx="135" cy="421" r="12" fill="#df8ee4"/>
+  <circle cx="265" cy="421" r="39" fill="#292a3c" stroke="#df8ee4" stroke-width="5"/>
+  <circle cx="265" cy="421" r="12" fill="#df8ee4"/>
+  <path d="M177 389v20m20-20v20m20-20v20" stroke="#9c8da9" stroke-width="6" stroke-linecap="round"/>
+  <path d="M181 445h38" stroke="#e052d4" stroke-width="7" stroke-linecap="round"/>
+  <path d="M73 80v55m18-38v38m18-64v64m198-42v45m18-66v66" stroke="#f59be6" stroke-opacity=".7" stroke-width="5" stroke-linecap="round"/>
+</svg>

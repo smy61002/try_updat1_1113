@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <title>Halu 在小鋼珠台前玩小鋼珠</title>
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1">
+      <stop stop-color="#64713c"/>
+      <stop offset="1" stop-color="#171d13"/>
+    </linearGradient>
+    <linearGradient id="skin" x2=".8" y2="1">
+      <stop stop-color="#edbd91"/>
+      <stop offset="1" stop-color="#b87551"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#bg)"/>
+  <circle cx="309" cy="93" r="93" fill="#d7ed7c" opacity=".13"/>
+  <path d="M38 61h5m18 0h5m18 0h5m18 0h5m18 0h5m18 0h5" stroke="#d7ed7c" stroke-opacity=".55" stroke-width="4" stroke-linecap="round"/>
+  <path d="M43 477c9-68 29-112 73-135l65 22v113" fill="#243025" stroke="#11170f" stroke-width="9"/>
+  <path d="M120 189c0-45 18-68 51-68s51 23 51 68v54c-8 35-25 52-51 52s-43-17-51-52z" fill="url(#skin)" stroke="#69432e" stroke-width="6"/>
+  <path d="M117 185c-3-39 14-74 55-74 28 0 46 20 50 49-18-5-31-16-40-29-12 17-31 27-62 29z" fill="#33251c"/>
+  <path d="M131 198h20m35 0h20" stroke="#35251d" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="141" cy="209" rx="5" ry="7" fill="#1e1713"/>
+  <ellipse cx="191" cy="209" rx="5" ry="7" fill="#1e1713"/>
+  <path d="m164 212-6 20 8 3m-16 12c9 8 20 8 29 0" fill="none" stroke="#754831" stroke-width="4" stroke-linecap="round"/>
+  <path d="M115 286c24 17 61 19 92 0l38 43-25 78-106-10-24-67z" fill="#d5dd85" stroke="#29321f" stroke-width="8" stroke-linejoin="round"/>
+  <path d="m98 331-30 49 44 19m128-94 26 20" fill="none" stroke="url(#skin)" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M181 352c17 3 35 10 54 23" fill="none" stroke="url(#skin)" stroke-width="17" stroke-linecap="round"/>
+  <path d="m205 369 13 13-6 16-17 4-12-13 6-16z" fill="url(#skin)" stroke="#69432e" stroke-width="4"/>
+  <path d="m205 378 9 3-3 9-10 2-6-7z" fill="#f3e7d2"/>
+  <path d="m202 458 45-19 54 30-21 31H190z" fill="#313b25"/>
+  <path d="m251 266 71 23-28 170-96-31z" fill="#242331" stroke="#10121b" stroke-width="10" stroke-linejoin="round"/>
+  <path d="m267 282 37 12-24 138-42-13z" fill="#d6e5a2" stroke="#82934f" stroke-width="7"/>
+  <path d="m269 307 21 7m-26 13 21 7m-26 14 21 7m-26 14 21 7" stroke="#768548" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="275" cy="335" r="9" fill="#f6db67" stroke="#fff3bb" stroke-width="3"/>
+  <circle cx="282" cy="383" r="8" fill="#e4a95c" stroke="#fff0bd" stroke-width="3"/>
+  <circle cx="276" cy="414" r="7" fill="#f4e3bf"/>
+  <path d="M239 270v-25c0-13 10-22 22-22s22 9 22 22v33" fill="none" stroke="#d5dd85" stroke-width="7"/>
+</svg>
